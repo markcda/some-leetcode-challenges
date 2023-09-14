@@ -1,7 +1,7 @@
 use crate::tools::{MResult, TResult, println, read};
 
 /// Функция для конвертации чисел в римской нотации в числа в арабской нотации.
-fn roman_to_int(s: String) -> TResult<i32> {
+pub fn roman_to_int(s: String) -> TResult<i32> {
   let mut n: i32 = 0;
   let mut iter = s.chars().zip(s.chars().skip(1));
   while let Some(pair) = iter.next() {
