@@ -43,8 +43,8 @@ pub fn read_opt() -> TResult<u8> {
 /// Считывает значение с клавиатуры с заданным отступом и преобразовывает в `T`.
 pub fn read<T: FromStr>(prompt: Option<String>) -> TResult<T> {
   let mut input_string = String::new();
-  if prompt.is_some() { println(&format!("{}", prompt.unwrap())); }
-  print!("\t");
+  if prompt.is_some() { print!("\t{} ", prompt.unwrap()); }
+  else { print!("\t"); }
   if io::stdout().flush().is_err() { return Err("Не удалось отправить строку".into()) };
   if io::stdin().read_line(&mut input_string).is_err() { return Err("Не удалось считать строку".into()) }
   parse::<T>(&input_string)
@@ -53,8 +53,8 @@ pub fn read<T: FromStr>(prompt: Option<String>) -> TResult<T> {
 /// Считывает много значений одной строкой с заданным отступом с клавиатуры и преобразовывает в `Vec<T>`.
 pub fn read_mul<T: FromStr>(prompt: Option<String>, delimeter: Option<String>) -> TResult<Vec<T>> {
   let mut input_string = String::new();
-  if prompt.is_some() { println(&format!("{}", prompt.unwrap())); }
-  print!("\t");
+  if prompt.is_some() { print!("\t{} ", prompt.unwrap()); }
+  else { print!("\t"); }
   if io::stdout().flush().is_err() { return Err("Не удалось отправить строку".into()) };
   if io::stdin().read_line(&mut input_string).is_err() { return Err("Не удалось считать строку".into()) }
   parse_mul::<T>(&input_string, delimeter)
