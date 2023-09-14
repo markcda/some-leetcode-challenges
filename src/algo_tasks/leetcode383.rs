@@ -2,14 +2,14 @@ use crate::tools::{MResult, read, println};
 
 /// Функция сообщает, можно ли собрать из букв в "магазине" заметку.
 fn can_construct(ransom_note: String, magazine: String) -> bool {
-  let mut vec = Vec::with_capacity(26);
-  for _ in 0..26 { vec.push(0); }
+  let mut vec = Vec::with_capacity(256);
+  for _ in 0..256 { vec.push(0); }
   for i in magazine.chars() {
-    vec[(i as usize) - 97] += 1;
+    vec[i as usize] += 1;
   }
   for i in ransom_note.chars() {
-      if vec[(i as usize) - 97] == 0 { return false; }
-    vec[(i as usize) - 97] -= 1;
+      if vec[i as usize] == 0 { return false; }
+    vec[i as usize] -= 1;
   }
   true
 }
