@@ -24,4 +24,11 @@ mod tests {
   fn test_roman_to_int() {
     assert_eq!(roman_to_int("MMXXIII".into()), Ok(2023));
   }
+
+  use crate::algo_tasks::leetcode412::fizz_buzz;
+
+  #[test]
+  fn test_fizz_buzz() {
+    assert_eq!(fizz_buzz(17)[14], "FizzBuzz");
+  }
 }
