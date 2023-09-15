@@ -15,3 +15,16 @@ pub struct ListNode {
 //     }
 //   }
 // }
+
+/// Создаёт список из вектора чисел.
+pub fn make_single_linked_list(numbers: &Vec<i32>) -> Option<Box<ListNode>> {
+  numbers
+    .into_iter()
+    .rev()
+    .fold(None, |next, val| {
+      Some(Box::new(ListNode {
+        val: *val,
+        next,
+      }))
+    })
+}

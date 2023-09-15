@@ -31,4 +31,37 @@ mod tests {
   fn test_fizz_buzz() {
     assert_eq!(fizz_buzz(17)[14], "FizzBuzz");
   }
+
+  use crate::structs::single_linked_list::{ListNode, make_single_linked_list};
+  use crate::algo_tasks::leetcode876::middle_node;
+
+  #[test]
+  fn test_middle_node() {
+    assert_eq!(
+      middle_node(make_single_linked_list(&vec![1, 2, 3, 4, 5])),
+      Some(Box::new(ListNode {
+        val: 3,
+        next: Some(Box::new(ListNode {
+          val: 4,
+          next: Some(Box::new(ListNode {
+            val: 5,
+            next: None
+          }))
+        }))
+      }))
+    );
+    assert_eq!(
+      middle_node(make_single_linked_list(&vec![1, 2, 3, 4, 5, 6])),
+      Some(Box::new(ListNode {
+        val: 4,
+        next: Some(Box::new(ListNode {
+          val: 5,
+          next: Some(Box::new(ListNode {
+            val: 6,
+            next: None
+          }))
+        }))
+      }))
+    );
+  }
 }
