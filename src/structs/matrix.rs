@@ -1,5 +1,6 @@
 use std::str::FromStr;
 use std::ops::{Index, IndexMut};
+use std::slice::{Iter, IterMut};
 
 use crate::tools::{TResult, parse_mul};
 
@@ -123,4 +124,8 @@ impl<T: MatrixElement> Matrix<T> {
   pub fn len(&self) -> usize {
     return self.size.1;
   }
+
+  /// Возвращает итераторы.
+  pub fn iter(&self) -> Iter<'_, Vec<T>> { self.vals.iter() }
+  pub fn iter_mut(&mut self) -> IterMut<'_, Vec<T>> { self.vals.iter_mut() }
 }

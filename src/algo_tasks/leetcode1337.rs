@@ -1,5 +1,5 @@
 use crate::structs::matrix::Matrix;
-use crate::tools::{MResult, println, read};
+use crate::tools::{MResult, println, read, read_matrix};
 
 #[derive(PartialEq)]
 enum CmpRows {
@@ -39,13 +39,8 @@ pub fn k_weakest_rows(m: Matrix<i32>, k: i32) -> Vec<i32> {
 
 pub fn leetcode1337_task() -> MResult {
   println("Введите целочисленную матрицу, после ввода пропустите одну строку:");
-  let mut strs: Vec<String> = Vec::new();
-  while let Ok(s) = read::<String>(None) {
-    if !s.is_empty() { strs.push(s); }
-    else { break }
-  }
-  let m = Matrix::<i32>::parse_from_lines(strs)?;
-  let k: i32 = read(Some("Введите число слабейших строк, которые нужно вывести:"))?;
+  let m = read_matrix()?;
+  let k = read(Some("Введите число слабейших строк, которые нужно вывести:"))?;
   if k as usize > m.len() { return Err("Число слабейших строк больше числа строк в введённой матрице") }
   let weakest_rows = k_weakest_rows(m, k);
   println(&format!("Ответ: {:?}", weakest_rows));

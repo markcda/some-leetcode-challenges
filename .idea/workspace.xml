@@ -7,12 +7,15 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1279d6bc-ca94-43f5-941b-b831f4d125f2" name="Changes" comment="Добавил задачу">
-      <change afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode1342.rs" afterDir="false" />
+    <list default="true" id="1279d6bc-ca94-43f5-941b-b831f4d125f2" name="Changes" comment="Добавил задачу 1342">
+      <change afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode1672.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algo_tasks/leetcode1337.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode1337.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algo_tasks/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/mod.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structs/matrix.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/structs/matrix.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,13 +76,13 @@
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/titoffklim/Documents/Работы/2023.09.13 - Алгоритмы (обучение)/auto",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
-    "settings.editor.selected.configurable": "preferences.editor"
+    "settings.editor.selected.configurable": "language.rust.cargo.check"
   }
 }]]></component>
   <component name="RsExternalLinterProjectSettings">
     <option name="runOnTheFly" value="true" />
   </component>
-  <component name="RunManager" selected="Cargo.Test main::tests">
+  <component name="RunManager" selected="Cargo.Run auto">
     <configuration name="Build auto" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="build --package auto --bin auto" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -146,8 +149,8 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test tests::tests::test_fizz_buzz" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package auto --bin auto tests::tests::test_fizz_buzz -- --exact" />
+    <configuration name="Test tests::tests::test_maximum_wealth" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package auto --bin auto tests::tests::test_maximum_wealth -- --exact" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
@@ -163,8 +166,8 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test tests::tests::test_middle_node" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package auto --bin auto tests::tests::test_middle_node -- --exact" />
+    <configuration name="Test tests::tests::test_number_of_steps_to_reduce" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package auto --bin auto tests::tests::test_number_of_steps_to_reduce -- --exact" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
@@ -182,19 +185,19 @@
     </configuration>
     <list>
       <item itemvalue="Cargo.Build auto" />
+      <item itemvalue="Cargo.Test tests::tests::test_maximum_wealth" />
+      <item itemvalue="Cargo.Test tests::tests::test_number_of_steps_to_reduce" />
       <item itemvalue="Cargo.Run auto" />
       <item itemvalue="Cargo.Test main::tests" />
       <item itemvalue="Cargo.Test tests::tests" />
-      <item itemvalue="Cargo.Test tests::tests::test_fizz_buzz" />
-      <item itemvalue="Cargo.Test tests::tests::test_middle_node" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cargo.Test main::tests" />
         <item itemvalue="Cargo.Run auto" />
+        <item itemvalue="Cargo.Test tests::tests::test_maximum_wealth" />
+        <item itemvalue="Cargo.Test main::tests" />
+        <item itemvalue="Cargo.Test tests::tests::test_number_of_steps_to_reduce" />
         <item itemvalue="Cargo.Test tests::tests" />
-        <item itemvalue="Cargo.Test tests::tests::test_middle_node" />
-        <item itemvalue="Cargo.Test tests::tests::test_fizz_buzz" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +216,7 @@
       <workItem from="1694749161075" duration="5881000" />
       <workItem from="1694960033659" duration="124000" />
       <workItem from="1694960168019" duration="290000" />
-      <workItem from="1694987014025" duration="1700000" />
+      <workItem from="1694987014025" duration="3073000" />
     </task>
     <task id="LOCAL-00001" summary="Подключил 383 задачку">
       <option name="closed" value="true" />
@@ -263,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694751270425</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Добавил задачу 1342">
+      <option name="closed" value="true" />
+      <created>1694990646104</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694990646104</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +287,8 @@
     <MESSAGE value="Исправил ошибку, связанную с вылетом после использования цифр" />
     <MESSAGE value="Добавил задачу 412" />
     <MESSAGE value="Добавил задачу 876&#10;+ вынес создание односвязного списка в отдельную функцию" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил задачу 876&#10;+ вынес создание односвязного списка в отдельную функцию" />
+    <MESSAGE value="Добавил задачу 1342" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил задачу 1342" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

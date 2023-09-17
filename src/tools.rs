@@ -1,5 +1,6 @@
 use std::io::{self, Write};
 use std::str::FromStr;
+use crate::structs::matrix::{Matrix, MatrixElement};
 
 pub type MResult = Result<(), &'static str>;
 pub type TResult<T> = Result<T, &'static str>;
@@ -58,4 +59,14 @@ pub fn read_mul<T: FromStr>(prompt: Option<&str>, delimeter: Option<&str>) -> TR
   if io::stdout().flush().is_err() { return Err("Не удалось отправить строку".into()) };
   if io::stdin().read_line(&mut input_string).is_err() { return Err("Не удалось считать строку".into()) }
   parse_mul::<T>(&input_string, delimeter)
+}
+
+/// Считывает матрицу.
+pub fn read_matrix<T: MatrixElement>() -> TResult<Matrix<T>> {
+  let mut strs: Vec<String> = Vec::new();
+  while let Ok(s) = read::<String>(None) {
+    if !s.is_empty() { strs.push(s); }
+    else { break }
+  }
+  Ok(Matrix::parse_from_lines(strs)?)
 }
