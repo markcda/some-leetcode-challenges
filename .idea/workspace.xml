@@ -8,19 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1279d6bc-ca94-43f5-941b-b831f4d125f2" name="Changes" comment="Добавил задачу">
+      <change afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode1342.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algo_tasks/leetcode13.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode13.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algo_tasks/leetcode1337.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode1337.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algo_tasks/leetcode234.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode234.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algo_tasks/leetcode383.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode383.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algo_tasks/leetcode412.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode412.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algo_tasks/leetcode876.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode876.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algo_tasks/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/mod.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/structs/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/structs/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/structs/single_linked_list.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/structs/single_linked_list.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +79,7 @@
   <component name="RsExternalLinterProjectSettings">
     <option name="runOnTheFly" value="true" />
   </component>
-  <component name="RunManager" selected="Cargo.Build auto">
+  <component name="RunManager" selected="Cargo.Test main::tests">
     <configuration name="Build auto" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="build --package auto --bin auto" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -198,9 +190,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cargo.Test main::tests" />
         <item itemvalue="Cargo.Run auto" />
         <item itemvalue="Cargo.Test tests::tests" />
-        <item itemvalue="Cargo.Test main::tests" />
         <item itemvalue="Cargo.Test tests::tests::test_middle_node" />
         <item itemvalue="Cargo.Test tests::tests::test_fizz_buzz" />
       </list>
@@ -221,7 +213,7 @@
       <workItem from="1694749161075" duration="5881000" />
       <workItem from="1694960033659" duration="124000" />
       <workItem from="1694960168019" duration="290000" />
-      <workItem from="1694987014025" duration="258000" />
+      <workItem from="1694987014025" duration="1700000" />
     </task>
     <task id="LOCAL-00001" summary="Подключил 383 задачку">
       <option name="closed" value="true" />

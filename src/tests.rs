@@ -91,4 +91,13 @@ mod tests {
     ),
     vec![0,2]);
   }
+
+  use crate::algo_tasks::leetcode1342::number_of_steps;
+
+  #[test]
+  fn test_number_of_steps_to_reduce() {
+    assert_eq!(number_of_steps(14), 6);
+    assert_eq!(number_of_steps(8), 4);
+    assert_eq!(number_of_steps(123), 12);
+  }
 }

@@ -11,6 +11,7 @@ use crate::algo_tasks::{
   leetcode412::leetcode412_task,
   leetcode876::leetcode876_task,
   leetcode1337::leetcode1337_task,
+  leetcode1342::leetcode1342_task,
 };
 use crate::tools::{MResult, read_opt};
 
@@ -24,6 +25,7 @@ fn main() -> MResult {
     println!("5. FizzBuzz");
     println!("6. Середина односвязного списка");
     println!("7. k слабейших строк матрицы");
+    println!("8. Число шагов, чтобы сделать число нулём");
     match read_opt()? {
       1u16 => simple_stock_span_task()?,
       2u16 => leetcode13_task()?,
@@ -32,6 +34,7 @@ fn main() -> MResult {
       5u16 => leetcode412_task()?,
       6u16 => leetcode876_task()?,
       7u16 => leetcode1337_task()?,
+      8u16 => leetcode1342_task()?,
       _ => break,
     };
     println!("\nВыберите задачу или введите 0 для выхода:");
