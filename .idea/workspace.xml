@@ -8,8 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1279d6bc-ca94-43f5-941b-b831f4d125f2" name="Changes" comment="Добавил задачу">
-      <change afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode1337.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algo_tasks/leetcode13.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode13.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algo_tasks/leetcode1337.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode1337.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algo_tasks/leetcode234.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode234.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algo_tasks/leetcode383.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode383.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algo_tasks/leetcode412.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/leetcode412.rs" afterDir="false" />
@@ -17,6 +18,7 @@
       <change beforePath="$PROJECT_DIR$/src/algo_tasks/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/algo_tasks/mod.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/structs/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/structs/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structs/single_linked_list.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/structs/single_linked_list.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tools.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools.rs" afterDir="false" />
     </list>
@@ -69,19 +71,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/titoffklim/Documents/Работы/2023.09.13 - Алгоритмы (обучение)/auto&quot;,
-    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/titoffklim/Documents/Работы/2023.09.13 - Алгоритмы (обучение)/auto",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
-}</component>
+}]]></component>
   <component name="RsExternalLinterProjectSettings">
     <option name="runOnTheFly" value="true" />
   </component>
@@ -219,6 +221,7 @@
       <workItem from="1694749161075" duration="5881000" />
       <workItem from="1694960033659" duration="124000" />
       <workItem from="1694960168019" duration="290000" />
+      <workItem from="1694987014025" duration="258000" />
     </task>
     <task id="LOCAL-00001" summary="Подключил 383 задачку">
       <option name="closed" value="true" />
