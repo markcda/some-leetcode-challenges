@@ -15,8 +15,8 @@ fn can_construct(ransom_note: String, magazine: String) -> bool {
 }
 
 pub fn leetcode383_task() -> MResult {
-  let ransom_note: String = read(Some("Введите заметку, которую вы хотели бы составить:".into()))?;
-  let magazine: String = read(Some("Введите магазин доступных букв:".into()))?;
+  let ransom_note: String = read(Some("Введите заметку, которую вы хотели бы составить:"))?;
+  let magazine: String = read(Some("Введите магазин доступных букв:"))?;
   match can_construct(ransom_note, magazine) {
     true => println("Да, можно составить заметку!"),
     false => println("Нет, заметку составить нельзя."),

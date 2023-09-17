@@ -16,6 +16,7 @@ mod tests {
   fn test_parse_multiple() {
     assert_eq!(parse_mul::<u8>("7 11 8 6 3 8 9", None), Ok(vec![7u8, 11u8, 8u8, 6u8, 3u8, 8u8, 9u8]));
     assert_eq!(parse_mul::<u8>("7,11,8,6,3,8,9", Some(",".into())), Ok(vec![7u8, 11u8, 8u8, 6u8, 3u8, 8u8, 9u8]));
+    assert_eq!(parse_mul::<u8>("7 11 8 6     9", None), Ok(vec![7u8, 11u8, 8u8, 6u8, 9u8]));
   }
 
   use crate::algo_tasks::leetcode13::roman_to_int;

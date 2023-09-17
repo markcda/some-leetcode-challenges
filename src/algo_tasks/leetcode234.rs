@@ -9,7 +9,7 @@ fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
 }
 
 pub fn leetcode234_task() -> MResult {
-  let numbers: Vec<i32> = read_mul(Some("Введите числа через пробел: ".into()), None)?;
+  let numbers: Vec<i32> = read_mul(Some("Введите числа через пробел: "), None)?;
   let head: Option<Box<ListNode>> = make_single_linked_list(&numbers);
   match is_palindrome(head) {
     true => println("Данный список является палиндромом."),

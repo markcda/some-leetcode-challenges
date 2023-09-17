@@ -23,7 +23,7 @@ pub fn roman_to_int(s: String) -> TResult<i32> {
       'D' => n += 500,
       'M' => n += 1000,
       _ => {
-        return Err("Не удалось сконвертировать число, т.к. оно содержит неизвестные символы.".into())
+        return Err("Не удалось сконвертировать число, т.к. оно содержит неизвестные символы.")
       },
     }
   }
@@ -36,14 +36,14 @@ pub fn roman_to_int(s: String) -> TResult<i32> {
     'D' => n += 500,
     'M' => n += 1000,
     _ => {
-      return Err("Не удалось сконвертировать число, т.к. оно содержит неизвестные символы.".into())
+      return Err("Не удалось сконвертировать число, т.к. оно содержит неизвестные символы.")
     },
   }
   Ok(n)
 }
 
 pub fn leetcode13_task() -> MResult {
-  let roman_num: String = read(Some("Введите число в римской нотации:".into()))?;
+  let roman_num: String = read(Some("Введите число в римской нотации:"))?;
   match roman_to_int(roman_num) {
     Ok(arabic_num) => println(&format!("Результат: {}", arabic_num)),
     Err(err_str) => eprintln!("{}", err_str),

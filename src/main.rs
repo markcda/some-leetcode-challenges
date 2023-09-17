@@ -23,15 +23,15 @@ fn main() -> MResult {
     println!("5. FizzBuzz");
     println!("6. Середина односвязного списка");
     match read_opt()? {
-      1u8 => simple_stock_span_task()?,
-      2u8 => leetcode13_task()?,
-      3u8 => leetcode234_task()?,
-      4u8 => leetcode383_task()?,
-      5u8 => leetcode412_task()?,
-      6u8 => leetcode876_task()?,
+      1u16 => simple_stock_span_task()?,
+      2u16 => leetcode13_task()?,
+      3u16 => leetcode234_task()?,
+      4u16 => leetcode383_task()?,
+      5u16 => leetcode412_task()?,
+      6u16 => leetcode876_task()?,
       _ => break,
     };
-    println!("\nВыберите задачу:");
+    println!("\nВыберите задачу или введите 0 для выхода:");
   }
   Ok(())
 }

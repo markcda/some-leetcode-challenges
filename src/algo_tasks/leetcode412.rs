@@ -23,9 +23,9 @@ pub fn fizz_buzz(n: i32) -> Vec<String> {
 }
 
 pub fn leetcode412_task() -> MResult {
-  let n: i32 = read(Some("Введите любое число, большее нуля:".into()))?;
+  let n: i32 = read(Some("Введите любое число, большее нуля:"))?;
   if n <= 0 {
-    return Err("Число не больше нуля.".into())
+    return Err("Число не больше нуля.")
   }
   println(&format!("Результат: {:?}", fizz_buzz(n)));
   Ok(())

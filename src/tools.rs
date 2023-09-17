@@ -1,8 +1,8 @@
 use std::io::{self, Write};
 use std::str::FromStr;
 
-pub type MResult = Result<(), String>;
-pub type TResult<T> = Result<T, String>;
+pub type MResult = Result<(), &'static str>;
+pub type TResult<T> = Result<T, &'static str>;
 
 /// Печатает строку с заданным отступом для решаемой задачи.
 pub fn println(text: &str) {
@@ -18,30 +18,30 @@ pub fn parse<T: FromStr>(s: &str) -> TResult<T> {
 }
 
 /// Создаёт контейнер и, разбивая входную строку на части по разделителю `delimeter`, кладёт в контейнер преобразованные в `T` элементы.
-pub fn parse_mul<T: FromStr>(s: &str, delimeter: Option<String>) -> TResult<Vec<T>> {
+pub fn parse_mul<T: FromStr>(s: &str, delimeter: Option<&str>) -> TResult<Vec<T>> {
   let mut container = Vec::new();
   let delimeter = match delimeter {
     Some(delimeter) => delimeter,
     None => " ".into(),
   };
-  for token in s.split(&delimeter) {
+  for token in s.split(&delimeter).filter(|v| !v.is_empty()) {
     match parse::<T>(token) {
       Ok(val) => container.push(val),
-      Err(_) => { return Err(format!("Не удалось преобразовать часть строки к заданному типу (token = {})", token)); }
+      Err(_) => { return Err("Не удалось преобразовать часть строки к заданному типу"); }
     }
   }
   Ok(container)
 }
 
-/// Считывает значение с клавиатуры и преобразовывает в `T`.
-pub fn read_opt() -> TResult<u8> {
+/// Считывает значение `u16` с клавиатуры.
+pub fn read_opt() -> TResult<u16> {
   let mut input_string = String::new();
   if io::stdin().read_line(&mut input_string).is_err() { return Err("Не удалось считать строку".into()) }
-  parse::<u8>(&input_string)
+  parse::<u16>(&input_string)
 }
 
 /// Считывает значение с клавиатуры с заданным отступом и преобразовывает в `T`.
-pub fn read<T: FromStr>(prompt: Option<String>) -> TResult<T> {
+pub fn read<T: FromStr>(prompt: Option<&str>) -> TResult<T> {
   let mut input_string = String::new();
   if prompt.is_some() { print!("\t{} ", prompt.unwrap()); }
   else { print!("\t"); }
@@ -51,7 +51,7 @@ pub fn read<T: FromStr>(prompt: Option<String>) -> TResult<T> {
 }
 
 /// Считывает много значений одной строкой с заданным отступом с клавиатуры и преобразовывает в `Vec<T>`.
-pub fn read_mul<T: FromStr>(prompt: Option<String>, delimeter: Option<String>) -> TResult<Vec<T>> {
+pub fn read_mul<T: FromStr>(prompt: Option<&str>, delimeter: Option<&str>) -> TResult<Vec<T>> {
   let mut input_string = String::new();
   if prompt.is_some() { print!("\t{} ", prompt.unwrap()); }
   else { print!("\t"); }
