@@ -10,6 +10,13 @@ pub fn println(text: &str) {
   println!("\t{}", text)
 }
 
+/// Печатает текст без перевода строки на экране.
+pub fn print(text: &str) -> MResult {
+  print!("{}", text);
+  if io::stdout().flush().is_err() { return Err("Не удалось отправить строку".into()) };
+  Ok(())
+}
+
 /// Преобразовывает часть строки в заданный тип, для которого определён порядок преобразования (`T: FromStr`).
 pub fn parse<T: FromStr>(s: &str) -> TResult<T> {
   match s.trim().parse::<T>() {
