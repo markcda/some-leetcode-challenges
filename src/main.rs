@@ -14,6 +14,7 @@ use crate::algo_tasks::{
   leetcode1337::leetcode1337_task,
   leetcode1342::leetcode1342_task,
   leetcode1672::leetcode1672_task,
+  information_theory_lab1::discrete_random_value_modeling,
 };
 use crate::tools::{MResult, read_opt};
 
@@ -27,6 +28,7 @@ fn print_ops() {
   println!("7. k слабейших строк матрицы");
   println!("8. Число шагов, чтобы сделать число нулём");
   println!("9. Максимальное богатство");
+  println!("10. Моделирование дискретной случайной величины методом суперпозиции")
 }
 
 fn select(opt: u16) -> MResult {
@@ -40,6 +42,7 @@ fn select(opt: u16) -> MResult {
     7u16 => leetcode1337_task()?,
     8u16 => leetcode1342_task()?,
     9u16 => leetcode1672_task()?,
+    10u16 => discrete_random_value_modeling()?,
     _ => return Err("Программа завершена."),
   })
 }

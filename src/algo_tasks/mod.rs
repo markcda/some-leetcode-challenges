@@ -7,3 +7,5 @@ pub mod leetcode876;
 pub mod leetcode1337;
 pub mod leetcode1342;
 pub mod leetcode1672;
+pub mod codeforces_mgotu_qualification_a;
+pub mod information_theory_lab1;
