@@ -127,5 +127,7 @@ impl<T: MatrixElement> Matrix<T> {
 
   /// Возвращает итераторы.
   pub fn iter(&self) -> Iter<'_, Vec<T>> { self.vals.iter() }
+
+  #[allow(dead_code)]
   pub fn iter_mut(&mut self) -> IterMut<'_, Vec<T>> { self.vals.iter_mut() }
 }

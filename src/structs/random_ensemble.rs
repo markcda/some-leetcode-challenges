@@ -69,6 +69,8 @@ impl<T: Clone> RandomEnsemble<T> {
     self.check_compiled();
     self.values.iter_mut()
   }
+
+  #[allow(dead_code)]
   pub fn probabilities_iter(&self) -> Iter<'_, f64> {
     self.check_compiled();
     self.probabilities.iter()
@@ -79,6 +81,7 @@ impl<T: Clone> RandomEnsemble<T> {
     &self.values
   }
 
+  #[allow(dead_code)]
   pub fn probabilities(&self) -> &Vec<f64> {
     self.check_compiled();
     &self.probabilities
