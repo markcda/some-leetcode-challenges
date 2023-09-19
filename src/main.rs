@@ -3,6 +3,7 @@ mod cf_tools;
 mod structs;
 mod tests;
 mod tools;
+mod utils;
 
 use crate::algo_tasks::task1::simple_stock_span_task;
 use crate::algo_tasks::{
@@ -14,7 +15,10 @@ use crate::algo_tasks::{
   leetcode1337::leetcode1337_task,
   leetcode1342::leetcode1342_task,
   leetcode1672::leetcode1672_task,
-  information_theory_lab1::discrete_random_value_modeling,
+  information_theory_lab1::{
+    discrete_random_value_modeling_example, markov_chain_modeling_example,
+    discrete_random_value_modeling,         markov_chain_modeling,
+  },
 };
 use crate::tools::{MResult, read_opt};
 
@@ -28,7 +32,10 @@ fn print_ops() {
   println!("7. k слабейших строк матрицы");
   println!("8. Число шагов, чтобы сделать число нулём");
   println!("9. Максимальное богатство");
-  println!("10. Моделирование дискретной случайной величины методом суперпозиции")
+  println!("10. Моделирование дискретной случайной величины методом суперпозиции [пример]");
+  println!("11. Моделирование цепи Маркова [пример]");
+  println!("12. Моделирование дискретной случайной величины методом суперпозиции");
+  println!("13. Моделирование цепи Маркова");
 }
 
 fn select(opt: u16) -> MResult {
@@ -42,7 +49,10 @@ fn select(opt: u16) -> MResult {
     7u16 => leetcode1337_task()?,
     8u16 => leetcode1342_task()?,
     9u16 => leetcode1672_task()?,
-    10u16 => discrete_random_value_modeling()?,
+    10u16 => discrete_random_value_modeling_example()?,
+    11u16 => markov_chain_modeling_example()?,
+    12u16 => discrete_random_value_modeling()?,
+    13u16 => markov_chain_modeling()?,
     _ => return Err("Программа завершена."),
   })
 }

@@ -1,5 +1,8 @@
 use std::slice::{Iter, IterMut};
+use rand::Rng;
+
 use crate::tools::{MResult, TResult};
+use crate::utils::rand_utils::find_index_of_random_range;
 
 /// Структура данных, хранящая величины `T` и вероятность их моделирования.
 #[derive(Clone)]
@@ -79,5 +82,14 @@ impl<T: Clone> RandomEnsemble<T> {
   pub fn probabilities(&self) -> &Vec<f64> {
     self.check_compiled();
     &self.probabilities
+  }
+
+  pub fn generate_value(&mut self) -> &T {
+    self.check_compiled();
+    let mut rng = rand::thread_rng();
+    let probability_value: f64 = 1.0f64 - rng.gen::<f64>();
+    let i = find_index_of_random_range(probability_value, self.len(), self.probabilities.iter());
+    self.frequences[i] += 1;
+    &self.values[i]
   }
 }
