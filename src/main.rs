@@ -7,6 +7,8 @@ mod tests;
 mod tools;
 mod utils;
 
+use std::process::exit;
+
 use crate::algo_tasks::task1::simple_stock_span_task;
 use crate::algo_tasks::{
   leetcode13::leetcode13_task,
@@ -21,6 +23,7 @@ use crate::algo_tasks::{
     discrete_random_value_modeling_example, markov_chain_modeling_example,
     discrete_random_value_modeling,         markov_chain_modeling,
   },
+  codeforces_mgotu_qualification_a::cf_mgotu_qv_a,
 };
 use crate::tools::{MResult, read_opt};
 
@@ -38,6 +41,7 @@ fn print_ops() {
   println!("11. Моделирование цепи Маркова [пример]");
   println!("12. Моделирование дискретной случайной величины методом суперпозиции");
   println!("13. Моделирование цепи Маркова");
+  println!("14. Вращайте барабан! (https://codeforces.com/problemset/problem/1804/C)")
 }
 
 fn select(opt: u16) -> MResult {
@@ -55,7 +59,8 @@ fn select(opt: u16) -> MResult {
     11u16 => markov_chain_modeling_example()?,
     12u16 => discrete_random_value_modeling()?,
     13u16 => markov_chain_modeling()?,
-    _ => return Err("Программа завершена."),
+    14u16 => cf_mgotu_qv_a()?,
+    _ => exit(0),
   })
 }
 
