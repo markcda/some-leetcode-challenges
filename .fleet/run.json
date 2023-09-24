@@ -5,6 +5,10 @@
       "cargoExtraArgs": ["run"],
       "name": "Run auto",
     },
-    
+    {
+      "type": "cargo",
+      "cargoExtraArgs": ["build"],
+      "name": "Build auto",
+    }
   ]
 }

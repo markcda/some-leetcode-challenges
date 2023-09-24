@@ -4,8 +4,7 @@ use std::slice::{Iter, IterMut};
 
 use crate::tools::{TResult, parse_mul};
 
-pub trait MatrixElement: FromStr + Default + Clone {}
-impl<T> MatrixElement for T where T: FromStr + Default + Clone {}
+pub trait MatrixElement = FromStr + Default + Clone;
 
 /// Матрица с размерами.
 #[derive(Debug, Clone)]

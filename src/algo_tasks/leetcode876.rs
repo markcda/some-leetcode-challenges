@@ -1,9 +1,9 @@
-use crate::structs::single_linked_list::{ListNode, make_single_linked_list};
+use crate::structs::single_linked_list::{ListNode, NodeValue, make_single_linked_list};
 use crate::tools::{MResult, read_mul, println};
 
 /// Возвращает середину односвязного списка. Если в списке чётное число элементов, возвращает второй элемент середины.
 /// Использует два указателя по списку: быстрый и медленный. Быстрый делает два шага по списку на каждый шаг медленного.
-pub fn middle_node(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+pub fn middle_node<T: NodeValue>(head: Option<Box<ListNode<T>>>) -> Option<Box<ListNode<T>>> {
   if head.is_none() { return None; }
   let mut slow = head.as_ref();
   let mut fast = head.as_ref();
@@ -22,7 +22,7 @@ pub fn middle_node(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
 
 pub fn leetcode876_task() -> MResult {
   let numbers: Vec<i32> = read_mul(Some("Введите числа через пробел: "), None)?;
-  let head: Option<Box<ListNode>> = make_single_linked_list(&numbers);
+  let head: Option<Box<ListNode<i32>>> = make_single_linked_list(&numbers);
   match middle_node(head) {
     Some(result_node) => println(&format!("Середина списка: {}, полный вывод: {:?}", result_node.val, result_node)),
     None => return Err("Не удалось найти середину списка"),

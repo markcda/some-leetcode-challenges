@@ -1,3 +1,5 @@
+#![feature(trait_alias)]
+
 mod algo_tasks;
 mod cf_tools;
 mod structs;

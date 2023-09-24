@@ -1,13 +1,13 @@
-use crate::structs::single_linked_list::ListNode;
+use crate::structs::single_linked_list::{ListNode, NodeValue};
 
 /// Итератор по однонаправленному списку.
-pub struct IterListNode<'a> {
-  head_ref: Option<&'a ListNode>,
+pub struct IterListNode<'a, T: NodeValue> {
+  head_ref: Option<&'a ListNode<T>>,
 }
 
-impl<'a> IterListNode<'a> {
+impl<'a, T: NodeValue> IterListNode<'a, T> {
   /// Создаёт итератор.
-  pub fn new(head_ref: Option<&'a ListNode>) -> Self {
+  pub fn new(head_ref: Option<&'a ListNode<T>>) -> Self {
     Self { head_ref }
   }
 
@@ -15,7 +15,7 @@ impl<'a> IterListNode<'a> {
   /// После проверки текущее значение итератора смещается, а поскольку функция рекурсивна и сразу после смещения поднимается на состояние выше,
   ///   то мы получаем де-факто двусвязную проверку, в ходе которой состояние предыдущей выбранной для проверки ноды хранится в стеке рекурсивных
   ///   вызовов. На самом деле, это не лучшее решение. Посмотреть другие решения: https://leetcode.com/problems/palindrome-linked-list/solutions/
-  pub fn is_palindrome(&mut self, node: Option<&ListNode>) -> bool {
+  pub fn is_palindrome(&mut self, node: Option<&ListNode<T>>) -> bool {
     if let Some(some_node) = node {
       if !self.is_palindrome(some_node.next.as_deref()) {
         return false;
