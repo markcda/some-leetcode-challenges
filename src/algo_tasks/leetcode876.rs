@@ -23,6 +23,9 @@ pub fn middle_node(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
 pub fn leetcode876_task() -> MResult {
   let numbers: Vec<i32> = read_mul(Some("Введите числа через пробел: "), None)?;
   let head: Option<Box<ListNode>> = make_single_linked_list(&numbers);
-  println(&format!("Середина списка: {:?}", middle_node(head)));
+  match middle_node(head) {
+    Some(result_node) => println(&format!("Середина списка: {}, полный вывод: {:?}", result_node.val, result_node)),
+    None => return Err("Не удалось найти середину списка"),
+  }
   Ok(())
 }

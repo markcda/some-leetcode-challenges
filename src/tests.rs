@@ -123,4 +123,24 @@ mod tests {
         vec![1,9,5]
       ]).unwrap()), 17);
   }
+
+  use crate::structs::binary_search_tree::BinarySearchTree;
+
+  #[test]
+  fn test_bst() {
+    let mut bst1 = BinarySearchTree::<i32>::new();
+    bst1.insert(5).unwrap();
+    bst1.insert(4).unwrap();
+    bst1.insert(6).unwrap();
+    let mut bst2 = BinarySearchTree::<i32>::new();
+    bst2.insert(5).unwrap();
+    bst2.insert(6).unwrap();
+    bst2.insert(4).unwrap();
+    assert_eq!(bst1, bst2);
+    let mut bst3 = BinarySearchTree::<i32>::new();
+    bst3.insert(4).unwrap();
+    bst3.insert(5).unwrap();
+    bst3.insert(6).unwrap();
+    assert_ne!(bst1, bst3);
+  }
 }
