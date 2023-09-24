@@ -9,6 +9,11 @@
       "type": "cargo",
       "cargoExtraArgs": ["build"],
       "name": "Build auto",
+    },
+    {
+      "type": "cargo",
+      "cargoExtraArgs": ["test"],
+      "name": "Test auto",
     }
   ]
 }
