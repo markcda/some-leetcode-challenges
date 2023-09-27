@@ -23,6 +23,8 @@ use crate::algo_tasks::{
     discrete_random_value_modeling,         markov_chain_modeling,
   },
   codeforces_mgotu_qualification_a::cf_mgotu_qv_a,
+  vdi_mipt_rl::mipt_problem_rl_find_gcd,
+  vdi_mipt_cf::mipt_problem_cf_chained_fractions,
 };
 use crate::tools::{MResult, read_opt};
 
@@ -40,7 +42,9 @@ fn print_ops() {
   println!("11. Моделирование цепи Маркова [пример]");
   println!("12. Моделирование дискретной случайной величины методом суперпозиции");
   println!("13. Моделирование цепи Маркова");
-  println!("14. Вращайте барабан! (https://codeforces.com/problemset/problem/1804/C)")
+  println!("14. Вращайте барабан! (https://codeforces.com/problemset/problem/1804/C)");
+  println!("15. Нахождение НОД (бинарный алгоритм Евклида) - задача МФТИ [RL](http://olymp1.vdi.mipt.ru/)");
+  println!("16. Разряды цепной дроби - задача МФТИ [CF](http://olymp1.vdi.mipt.ru/)");
 }
 
 fn select(opt: u16) -> MResult {
@@ -59,6 +63,8 @@ fn select(opt: u16) -> MResult {
     12u16 => discrete_random_value_modeling()?,
     13u16 => markov_chain_modeling()?,
     14u16 => cf_mgotu_qv_a()?,
+    15u16 => mipt_problem_rl_find_gcd()?,
+    16u16 => mipt_problem_cf_chained_fractions()?,
     _ => exit(0),
   })
 }
