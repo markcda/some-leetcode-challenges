@@ -46,3 +46,32 @@ pub fn leetcode1337_task() -> MResult {
   println(&format!("Ответ: {:?}", weakest_rows));
   Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+  #[test]
+  fn test_k_weakest_rows() {
+    use crate::structs::matrix::Matrix;
+    use crate::algo_tasks::leetcode1337::k_weakest_rows;
+    
+    assert_eq!(k_weakest_rows(
+      Matrix::<i32>::from(
+        vec![vec![1,1,0,0,0],
+             vec![1,1,1,1,0],
+             vec![1,0,0,0,0],
+             vec![1,1,0,0,0],
+             vec![1,1,1,1,1]],
+      ).unwrap(), 3
+    ),
+    vec![2,0,3]);
+    assert_eq!(k_weakest_rows(
+      Matrix::<i32>::from(
+        vec![vec![1,0,0,0],
+             vec![1,1,1,1],
+             vec![1,0,0,0],
+             vec![1,0,0,0]],
+      ).unwrap(), 2
+    ),
+    vec![0,2]);
+  }
+}

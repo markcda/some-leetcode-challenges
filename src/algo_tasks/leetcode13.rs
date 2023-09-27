@@ -50,3 +50,13 @@ pub fn leetcode13_task() -> MResult {
   }
   Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+  #[test]
+  fn test_roman_to_int() {
+    use crate::algo_tasks::leetcode13::roman_to_int;
+    
+    assert_eq!(roman_to_int("MMXXIII".into()), Ok(2023));
+  }
+}

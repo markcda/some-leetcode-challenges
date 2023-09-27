@@ -135,3 +135,26 @@ impl<T: PartialOrd> From<BSTNode<T>> for MNode<T> {
     Option::Some(Box::new(node))
   }
 }
+
+#[cfg(test)]
+mod tests {
+  #[test]
+  fn test_bst() {
+    use crate::structs::binary_search_tree::BinarySearchTree;
+    
+    let mut bst1 = BinarySearchTree::<i32>::new();
+    bst1.insert(5).unwrap();
+    bst1.insert(4).unwrap();
+    bst1.insert(6).unwrap();
+    let mut bst2 = BinarySearchTree::<i32>::new();
+    bst2.insert(5).unwrap();
+    bst2.insert(6).unwrap();
+    bst2.insert(4).unwrap();
+    assert_eq!(bst1, bst2);
+    let mut bst3 = BinarySearchTree::<i32>::new();
+    bst3.insert(4).unwrap();
+    bst3.insert(5).unwrap();
+    bst3.insert(6).unwrap();
+    assert_ne!(bst1, bst3);
+  }
+}

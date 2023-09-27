@@ -30,3 +30,13 @@ pub fn leetcode412_task() -> MResult {
   println(&format!("Результат: {:?}", fizz_buzz(n)));
   Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+  #[test]
+  fn test_fizz_buzz() {
+    use crate::algo_tasks::leetcode412::fizz_buzz;
+    
+    assert_eq!(fizz_buzz(17)[14], "FizzBuzz");
+  }
+}
