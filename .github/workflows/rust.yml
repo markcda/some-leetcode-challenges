@@ -1,5 +1,5 @@
 name: Rust
-
+      
 on:
   push:
     branches: [ "master" ]
@@ -10,13 +10,18 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
-
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Build
-      run: cargo build --verbose
-    - name: Run tests
-      run: cargo test --verbose
+      - name: Setup | Checkout
+        uses: actions/checkout@v2
+      - name: Setup | Rust
+        uses: ATiltedTree/setup-rust@v1
+        with:
+          rust-version: nightly
+          components: clippy
+      - name: Lint
+        run: cargo clippy --verbose
+      - name: Test
+        run: cargo test --verbose
