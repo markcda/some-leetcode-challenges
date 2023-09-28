@@ -11,3 +11,5 @@ pub mod codeforces_mgotu_qualification_a;
 pub mod information_theory_lab1;
 pub mod vdi_mipt_rl;
 pub mod vdi_mipt_cf;
+pub mod vdi_mipt_fm;
+pub mod vdi_mipt_pp;

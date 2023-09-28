@@ -25,6 +25,8 @@ use crate::algo_tasks::{
   codeforces_mgotu_qualification_a::cf_mgotu_qv_a,
   vdi_mipt_rl::mipt_problem_rl_find_gcd,
   vdi_mipt_cf::mipt_problem_cf_chained_fractions,
+  vdi_mipt_fm::mipt_problem_fm_fibonacci_with_module,
+  vdi_mipt_pp::mipt_problem_pp_fibonacci_with_pisano_period,
 };
 use crate::tools::{MResult, read_opt};
 
@@ -45,6 +47,8 @@ fn print_ops() {
   println!("14. Вращайте барабан! (https://codeforces.com/problemset/problem/1804/C)");
   println!("15. Нахождение НОД (бинарный алгоритм Евклида) - задача МФТИ [RL](http://olymp1.vdi.mipt.ru/)");
   println!("16. Разряды цепной дроби - задача МФТИ [CF](http://olymp1.vdi.mipt.ru/)");
+  println!("17. Числа Фибоначчи по модулю");
+  println!("18. Числа Фибоначчи по модулю с применением периодов Пизано");
 }
 
 fn select(opt: u16) -> MResult {
@@ -65,6 +69,8 @@ fn select(opt: u16) -> MResult {
     14u16 => cf_mgotu_qv_a()?,
     15u16 => mipt_problem_rl_find_gcd()?,
     16u16 => mipt_problem_cf_chained_fractions()?,
+    17u16 => mipt_problem_fm_fibonacci_with_module()?,
+    18u16 => mipt_problem_pp_fibonacci_with_pisano_period()?,
     _ => exit(0),
   })
 }
