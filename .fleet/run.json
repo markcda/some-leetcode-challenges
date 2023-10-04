@@ -3,17 +3,17 @@
     {
       "type": "cargo",
       "cargoExtraArgs": ["run"],
-      "name": "Run auto",
+      "name": "Run auto"
     },
     {
       "type": "cargo",
       "cargoExtraArgs": ["build"],
-      "name": "Build auto",
+      "name": "Build auto"
     },
     {
       "type": "cargo",
       "cargoExtraArgs": ["test"],
-      "name": "Test auto",
+      "name": "Test auto"
     }
   ]
 }
