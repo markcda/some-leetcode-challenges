@@ -2,6 +2,7 @@
 
 mod algo_tasks;
 mod cf_tools;
+mod experiments;
 mod structs;
 mod tools;
 mod utils;
@@ -28,6 +29,9 @@ use crate::algo_tasks::{
   vdi_mipt_fm::mipt_problem_fm_fibonacci_with_module,
   vdi_mipt_pp::mipt_problem_pp_fibonacci_with_pisano_period,
 };
+use crate::experiments::{
+  avl_task_01::avl_tree_task_01_generate_tree,
+};
 use crate::tools::{MResult, read_opt};
 
 fn print_ops() {
@@ -47,8 +51,9 @@ fn print_ops() {
   println!("14. Вращайте барабан! (https://codeforces.com/problemset/problem/1804/C)");
   println!("15. Нахождение НОД (бинарный алгоритм Евклида) - задача МФТИ [RL](http://olymp1.vdi.mipt.ru/)");
   println!("16. Разряды цепной дроби - задача МФТИ [CF](http://olymp1.vdi.mipt.ru/)");
-  println!("17. Числа Фибоначчи по модулю");
-  println!("18. Числа Фибоначчи по модулю с применением периодов Пизано");
+  println!("17. Числа Фибоначчи по модулю [FM](http://olymp1.vdi.mipt.ru/)");
+  println!("18. Числа Фибоначчи по модулю с применением периодов Пизано [PP](http://olymp1.vdi.mipt.ru/)");
+  println!("19. АВЛ-деревья (https://habr.com/ru/articles/150732/)")
 }
 
 fn select(opt: u16) -> MResult {
@@ -71,6 +76,7 @@ fn select(opt: u16) -> MResult {
     16u16 => mipt_problem_cf_chained_fractions()?,
     17u16 => mipt_problem_fm_fibonacci_with_module()?,
     18u16 => mipt_problem_pp_fibonacci_with_pisano_period()?,
+    19u16 => avl_tree_task_01_generate_tree()?,
     _ => exit(0),
   })
 }
